@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit&family=Righteous&display=swap');
+
+
+
+body {
+    background-color: rgb(42, 42, 42);
+    background-image: url('https://wallpaperaccess.com/full/5088870.jpg');
+}
+
+.form-control {
+    /* background-color: rgb(149, 149, 149); */
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAtHehXaRxGXetic_0CQDkKeiRrk8zZ-8eDIGIaGHQWr2obzbUF7qu1QeU9XJ2wswWEX8&usqp=CAU');
+    border-radius: 20px;
+    transition: .5s;
+}
+.form-control:focus {
+    box-shadow: inset 0px 0px 8px black;
+    transform: scale(1.05);
+}
+
+label{
+    color: rgb(209, 255, 209);
+    font-family: 'Kanit', sans-serif;
+    font-size: 1.2rem;
+    text-shadow: 2px 2px 4px black;
+}
+
+.btn{
+
+                display: inline-block;
+                outline: 0;
+                border: 0;
+                cursor: pointer;
+                will-change: box-shadow,transform;
+                background: radial-gradient( 100% 100% at 100% 0%, #89E5FF 0%, #5468FF 100% );
+                box-shadow: 0px 2px 4px rgb(45 35 66 / 40%), 0px 7px 13px -3px rgb(45 35 66 / 30%), inset 0px -3px 0px rgb(58 65 111 / 50%);
+                padding: 0 32px;
+                border-radius: 6px;
+                color: #fff;
+                height: 48px;
+                font-size: 18px;
+                text-shadow: 0 1px 0 rgb(0 0 0 / 40%);
+                transition: box-shadow 0.15s ease,transform 0.15s ease;
+}
+.btn:hover {
+                    box-shadow: 0px 4px 8px rgb(45 35 66 / 40%), 0px 7px 13px -3px rgb(45 35 66 / 30%), inset 0px -3px 0px #3c4fe0;
+                    transform: translateY(-2px);
+                }
+                
+.a-btn {
+    height: 40px;
+
+}            
+
+/* home */
+.main__title{
+
+    position: relative;
+    left: 50%;
+  font-family: 'Righteous', cursive;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+
+.info__box{
+    margin: 13px;
+ 
+    padding: 10px 20px 10px 20px;
+    border-radius: 20px;
+    
+
+background: rgba(255, 255, 255, 0.418);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(4.4px);
+-webkit-backdrop-filter: blur(4.4px);
+border: 1px solid rgba(255, 255, 255, 1);
+   transition: 1s;
+}
+
+.info__box:hover{
+    transform: scale(1.04);
+}
+
+.nav__top{
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    font-size: 1.5rem;
+    padding: 20px;
+    box-shadow: 5px 5px 10px black;
+  
+}
+
+.nav__items{
+    margin-left: 200px;
+}
+.nav__items li {
+    margin-right: 50px;
+}
+
+.about__info{
+    color: white;
+    width: 100%;
+    background-color: rgba(0, 0, 0,.7);
+    padding: 40px;
+    font-size: 1.5rem;
+    margin-left: 60px;
+    border-radius: 50px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+}
+.table__title{
+    display: flex;
+    justify-content: space-between;
+    color: white;
+}
+
+.table__body{
+    color: white;
+    background-color: rgba(29, 29, 29, 0.9);
+}
+   
+

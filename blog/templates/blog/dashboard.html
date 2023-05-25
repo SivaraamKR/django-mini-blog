@@ -1,0 +1,66 @@
+{% extends 'blog/base.html' %}
+
+
+{% block msg %}
+     {% if messages %}
+    {% for message in messages %}
+    <div {% if message.tags %} class="alert alert-{{message.tags}} alert-dismissible fade show" {% endif %} >
+        <strong>{{message}}</strong>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    {% endfor %}
+    {% endif %}
+</div>
+
+{% endblock msg %}
+
+{% block side %}
+<div class="col-sm-2 text-white my-5 text-center">
+    <h4 class="my-5">Profile</h4>
+    <small>Welcome </small>
+    <h5>{{full_name}}</h5>
+</div>
+{% endblock side%}
+
+{% block content %}
+<div class="col-sm-10">
+    <h3 class="text-white my-5">Dashboard Page</h3>
+    <a href="{% url 'addpost' %}" class="btn btn-success a-btn">Add Post</a>
+    <h4 class="text-center alert alert-info mt-3">Show Post Information</h4>
+    {% if posts %}
+    <table class="table table-hover bg-white">
+        <thead>
+           
+            <tr class=" table__title">
+                <div class="table__title">
+            <p>ID</p>
+            <p>Title</p>
+          <p>Description</p>
+            <p>Action</p>
+        </div>
+        </tr>
+        </thead>
+        <tbody class="table__body">
+            {% for post in posts %}
+            <tr class="table__row">
+                <th scope="row">{{post.id}}</th>
+                <td>{{post.title}}</td>
+                <td>{{post.desc}}</td>
+                <td class="text-center">
+                    <a href="{% url 'updatepost' post.id %}" class="btn-warning btn-sm">Edit</a>
+                    <form action="{% url 'deletepost' post.id %}" method="post" class="d-inline">
+                        {% csrf_token %}
+                        <input type="submit" class="btn-danger btn-sm" name="" id="" value="Delete">
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+    <h4 class="text-center alert alert-warning">No records</h4>
+    {% endif %}
+</div>
+{% endblock content %}
