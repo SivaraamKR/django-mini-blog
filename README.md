@@ -12,5 +12,5 @@ tzdata==2023.3
 
 #Project Screenshots:
 
-Home page -
+**Home page** -
 ![home](https://github.com/SivaraamKR/django-mini-blog/assets/98171716/5425c561-8100-4fc8-92e3-85bb0fe47fad)
